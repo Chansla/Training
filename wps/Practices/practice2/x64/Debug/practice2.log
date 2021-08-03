@@ -1,0 +1,9 @@
+﻿  main.cpp
+  Make.cpp
+  MakeFactory.cpp
+  MakePlane.cpp
+  MakeTrain.cpp
+  PlaneFactory.cpp
+  TrainFactory.cpp
+  正在生成代码...
+  practice2.vcxproj -> D:\wps_code\Training\wps\Practices\x64\Debug\practice2.exe
