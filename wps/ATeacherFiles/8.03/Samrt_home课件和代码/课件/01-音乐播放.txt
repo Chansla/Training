@@ -1,0 +1,117 @@
+一. 音乐播放说明
+(1)QMediaplayer
+说明: QMediaplayer可以用于解析音频文件和视频文件，继承自QMediaObject。
+QMediaObject可以提供关于媒体内容的接入，通过URL进行初始化，同时也可以提供可以播放的媒体文件的列表，与QMediaplayer对象息息相关。、
+使用QMediaplayer，除了需要添加必要的头文件之外，还需要在.pro(Qt的工程配置文件)添加QT += multimedia。
+
+头文件: #include <QMediaPlayer>
+
+xx.pro 添加：  QT += multimedia
+
+
+(2)常用函数 
+
+
+setVolume(int vol);  //设置音量
+
+setMedia(QUrl::fromLocalFile(QString src)); //通过src设置歌曲的路径
+
+
+play();  //播放音乐
+
+stop();  //结束当前音乐播放,从头开始播放
+
+pause();  //暂停当前音乐，重新播放，从暂停的位置开始播放。
+==============================================================
+示例代码:
+    //1.分配内存空间
+    player = new QMediaPlayer(this);
+
+    //2.选择播放的歌曲   ../上层目录
+    player->setMedia(QUrl::fromLocalFile("../gequ/鞠婧祎-青城山下白素贞.mp3"));
+
+    //3.设置播放音量
+    player->setVolume(40);
+
+    //4.播放歌曲
+    player->play();
+
+
+	//5.暂停音乐
+	player->stop();
+
+=========================================
+QRadioButton  
+
+相关 ischeck()函数，判断哪个被选中
+
+
+练习1： 把老师刚刚写的播放音乐的代码，自己写一边。
+练习2： 实现不同歌曲的播放和停止。
+	
+	
+
+
+二.Qt 操作camera的实现
+(1)Qt5.0版本的QMultimedia包含了许多有媒体相关的类，
+
+QCamera类用于打开系统的摄像头设备，
+QCameraViewfinder用于显示捕获的视频，
+QCameraImageCapture用于截图。
+
+以上类使用的话，需要在XX.Pro文件中添加
+
+QT += multimedia multimediawidgets
+
+(2)QCamera类
+说明: QCamera类用于操作系统的摄像头设备,可以进行开启，关闭
+      摄像头等操作。
+
+常用函数:
+	setViewfinder(QCameraViewfinder *finder); //设置图像显示区域
+	start(); //开启摄像头
+	stop();  //关闭摄像头
+	
+
+(2)QCameraViewfinder
+说明: 用于显示捕获的视频，视频数据必须在widget边框中才能显示出来。
+
+camera = new QCamera;
+
+viewfinder = new QCameraViewfinder();
+viewfinder->show();
+
+camera->setViewfinder(viewfinder);
+
+imageCapture = new QCameraImageCapture(camera);
+
+camera->setCaptureMode(QCamera::CaptureStillImage);
+camera->start();
+
+
+
+(3)QCameraImageCapture
+说明： 用于截图.
+
+常用函数: 
+	QCameraImageCapture(QCamera *camera); //构造函数，说明采用camera设备截图
+	
+	catpure(); //开始捕捉，截图照片,当照片捕捉完毕的时候，系统默认
+	          //会发送一个叫做imageCaptured(int id,QImage &img)的信号
+			  //id 对应图片的变化。 img图片信息类
+	
+
+(4)图片信息说明.
+
+QPixmap类可以设置，我们的图片信息。
+
+QPixmap(QString &filename); //设置文件信息.
+
+=======================================
+label常用函数
+
+void  setPixmap(const QPixmap &t );//设置图片信息
+
+
+
+

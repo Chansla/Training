@@ -1,0 +1,15 @@
+{
+    "array": [
+        1,
+        2,
+        3
+    ],
+    "enable": true,
+    "length": 10,
+    "name": "Car",
+    "precision": 0.1,
+    "province": {
+        "city": "黑龙江"
+    },
+    "what": null
+}
