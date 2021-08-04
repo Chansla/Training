@@ -14,17 +14,20 @@ class Login : public QWidget
 public:
     explicit Login(QWidget *parent = nullptr);
     ~Login();
+    void keyPressEvent(QKeyEvent *event) override;
 
-    bool loginSuccess();
+signals:
+    void showMain();
 
 private slots:
+    void slotShowThis();
+
     void on_pushButton_lg_clicked();
 
 private:
     Ui::Login *ui;
     QString usr;
     QString pwd;
-    bool statues;
 
 };
 

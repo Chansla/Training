@@ -14,30 +14,69 @@
    <string>SmartHome</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>30</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>设备操作</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_back">
     <property name="geometry">
      <rect>
       <x>530</x>
       <y>10</y>
       <width>75</width>
-      <height>23</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>返回登录</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_device">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>160</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>设备控制</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_weather">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>160</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>天气查询</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_music">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>160</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>音乐播放</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_video">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>160</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>视频监控</string>
     </property>
    </widget>
   </widget>
@@ -47,7 +86,7 @@
      <x>0</x>
      <y>0</y>
      <width>630</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

@@ -16,6 +16,18 @@ public:
     SmartHome(QWidget *parent = nullptr);
     ~SmartHome();
 
+signals:
+    void showLogin();
+    void showMusic();
+
+private slots:
+    void slotShowThis();
+
+
+    void on_pushButton_music_clicked();
+
+    void on_pushButton_back_clicked();
+
 private:
     Ui::SmartHome *ui;
 

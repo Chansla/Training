@@ -2,14 +2,17 @@
 #include "ui_login.h"
 #include <QMessageBox>
 #include <QDebug>
+#include <QKeyEvent>
 Login::Login(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Login)
 {
     ui->setupUi(this);
+    ui->lineEdit_usr->setFocus();
+    this->setWindowTitle("智能家居登陆界面");
     usr = "admin";
     pwd = "admin";
-    statues = false;
+
 }
 
 Login::~Login()
@@ -17,10 +20,19 @@ Login::~Login()
     delete ui;
 }
 
-bool Login::loginSuccess()
+void Login::keyPressEvent(QKeyEvent *event)
 {
-    return this->statues;
+    if(event->key() == Qt::Key_Enter || event->key() == Qt::Key_Return){
+            emit ui->pushButton_lg->click();
+        }
 }
+
+void Login::slotShowThis()
+{
+    this->show();
+    ui->lineEdit_usr->setFocus();
+}
+
 
 void Login::on_pushButton_lg_clicked()
 {
@@ -30,13 +42,15 @@ void Login::on_pushButton_lg_clicked()
     if(usr_ == this->usr && this->pwd == pwd_)
     {
         QMessageBox::information(this, tr("提示"), tr("登录成功！"));
-        this->statues = true;
-        qDebug() << "statues:" << statues;
+        this->hide();
+        ui->lineEdit_pwd->clear();
+        emit showMain();
+
     }
     else
     {
         QMessageBox::information(this, tr("提示"), tr("登录失败，用户名和密码不匹配！"));
-        this->statues = false;
-        qDebug() << "statues:" << statues;
+        ui->lineEdit_pwd->clear();
+        ui->lineEdit_pwd->setFocus();
     }
 }
