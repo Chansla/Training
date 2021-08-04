@@ -28,10 +28,27 @@ void SmartHome::on_pushButton_back_clicked()
     emit showLogin();
 }
 
+
+void SmartHome::on_pushButton_device_clicked()
+{
+    this->hide();
+    emit showDevice();
+}
+
+void SmartHome::on_pushButton_weather_clicked()
+{
+    this->hide();
+    emit showWeather();
+}
+
 void SmartHome::on_pushButton_music_clicked()
 {
     this->hide();
     emit showMusic();
 }
 
-
+void SmartHome::on_pushButton_video_clicked()
+{
+    this->hide();
+    emit showVideo();
+}

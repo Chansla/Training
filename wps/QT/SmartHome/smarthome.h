@@ -18,15 +18,25 @@ public:
 
 signals:
     void showLogin();
+    void showDevice();
+    void showWeather();
     void showMusic();
+    void showVideo();
 
 private slots:
     void slotShowThis();
 
 
-    void on_pushButton_music_clicked();
 
     void on_pushButton_back_clicked();
+
+    void on_pushButton_device_clicked();
+
+    void on_pushButton_weather_clicked();
+
+    void on_pushButton_music_clicked();
+
+    void on_pushButton_video_clicked();
 
 private:
     Ui::SmartHome *ui;

@@ -42,12 +42,16 @@ void Widget::send_request_message(QString ct)
 
     //1.创建一个http请求类对象，填充到对应的数据中
     QNetworkRequest http_request(http_url);
+    qDebug() << "air: request" << http_request.url();
 
     //2.向服务器发送http请求
     reply = manager->get(http_request);
 
+    qDebug() << "air: reply...";
+
     //3.关联信号与槽函数，当云服务器向我们回复数据结束的时候，系统会触发一个叫做finish信号
     connect(reply,SIGNAL(finished()),this,SLOT(deal_reply_msg()));
+
 
 }
 
@@ -63,6 +67,7 @@ void Widget::on_pushButton_clicked()
 
 void Widget::deal_reply_msg()
 {
+     qDebug() << "air: reply...finished";
     //1.读取所有的数据----Json类型的数据
     QByteArray data = reply->readAll();
 

@@ -27,7 +27,7 @@ SOURCES += \
         main.cpp \
         widget.cpp
 
-HEADERS += \
+HEADERS += \  
         widget.h
 
 FORMS += \

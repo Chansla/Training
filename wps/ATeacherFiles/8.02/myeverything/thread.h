@@ -26,6 +26,7 @@ signals:
      void send_file_info(QFileInfoList list);
 
 public slots:
+
 private:
      Myhash *sh;
 };
