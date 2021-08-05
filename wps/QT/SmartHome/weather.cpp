@@ -1,12 +1,13 @@
 #include "weather.h"
 #include "ui_weather.h"
-
+#include <QTime>
 Weather::Weather(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Weather)
 {
     ui->setupUi(this);
     this->setWindowTitle("天气查询页面");
+    this->setWindowFlags(Qt::FramelessWindowHint);
 }
 
 Weather::~Weather()
@@ -14,8 +15,15 @@ Weather::~Weather()
     delete ui;
 }
 
+void Weather::delayShwow()
+{
+    QTime dieTime = QTime::currentTime().addMSecs(200);//延时300毫秒
+    while (QTime::currentTime() < dieTime)
+           QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+}
 void Weather::slotShowThis()
 {
+    delayShwow();
     this->show();
 }
 
@@ -46,6 +54,8 @@ void Weather::slotReceiveData(QJsonObject dataToday)
     this->wind = dataToday["fengxiang"].toString();
     this->windPower = dataToday["fengli"].toString();
 
+    if(this->city == nullptr || this->date == nullptr)
+        return;
     ui->label_city->setText(this->city);
     ui->label_weather->setText(this->weather);
     ui->label_temperature->setText(QString(this->temperatureLow + " ~ " + this->temperatureHigh));

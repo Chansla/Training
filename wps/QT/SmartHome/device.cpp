@@ -1,16 +1,25 @@
 #include "device.h"
 #include "ui_device.h"
-
+#include <QFile>
+#include <QDebug>
+#include <QTime>
 Device::Device(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Device)
 {
+    loadStyleSheet("device");
     ui->setupUi(this);
     this->setWindowTitle("设备控制界面");
+    this->setWindowFlags(Qt::FramelessWindowHint);
     ui->horizontalSlider_lightHost->setRange(0, 10);
     ui->horizontalSlider_lightSpot->setRange(0, 10);
     ui->horizontalSlider_sound->setRange(0, 100);
+    ui->lineEdit_temperature->setReadOnly(true);
     ui->lineEdit_temperature->setText(QString::number(this->Temp));
+    QFont font;
+    font.setPointSize(15);
+    ui->label_control->setFont(font);
+    ui->label_monitor->setFont(font);
 
 
 }
@@ -20,8 +29,27 @@ Device::~Device()
     delete ui;
 }
 
+void Device::delayShow()
+{
+    QTime dieTime = QTime::currentTime().addMSecs(200);//延时300毫秒
+    while (QTime::currentTime() < dieTime)
+           QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+}
+
+void Device::loadStyleSheet(const QString &sheetName)
+{
+    QFile file(":/" + sheetName.toLower() + ".qss");
+    file.open(QFile::ReadOnly);
+    if(file.isOpen())
+        qDebug()<< file.size();
+    QString styleSheet = QString::fromLatin1(file.readAll());
+    qApp->setStyleSheet(styleSheet);
+
+}
+
 void Device::slotShowThis()
 {
+    delayShow();
     this->show();
 }
 
@@ -92,7 +120,7 @@ void Device::on_pushButton_airConditioner_clicked()
     }
 }
 
-void Device::on_pushButton_TempUP_clicked()
+void Device::on_pushButton_TempUp_clicked()
 {
     if(airConditionerFlag == true)
     {

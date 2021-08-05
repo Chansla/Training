@@ -17,6 +17,7 @@ class Weather : public QWidget
 public:
     explicit Weather(QWidget *parent = nullptr);
     ~Weather();
+    void delayShwow();
 
 signals:
     void showMain();

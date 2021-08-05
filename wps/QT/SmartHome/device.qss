@@ -1,0 +1,178 @@
+QWidget
+{
+    background-image:url(:/res/background2.png);
+}
+
+QLineEdit
+{
+    border: 1px solid #7d9db3;
+    border-radius:2%;
+}
+
+QPushButton#pushButton_lg
+{
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+QPushButton#pushButton_lg:pressed
+{
+    background-color:#b3e0ff;
+    border-radius:2% 2%;
+}
+
+
+QGroupBox#groupBox_weather
+{
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;  
+}
+
+
+/* 滑动条*/
+QSlider
+{
+    background: transparent;
+}
+
+
+QSlider::groove
+{
+    border: 1px solid #7d9db3;
+    border-radius:8px;
+}
+
+
+QSlider::handle:horizontal
+{
+    background-color: #1296db;
+    border: 1px solid #0088e6;
+    width: 18px;
+    border-radius:8px;
+}
+
+
+QSlider::handle:vertical
+{
+    background-color: #1296db;
+    border: 1px solid #0088e6;
+    height: 18px;
+    border-radius:8px;
+}
+
+
+/* 返回按钮*/
+QPushButton#pushButton_backLogin
+{
+    border-image: url(:/icons/back1-48.png);
+    border-radius:2% 2%;
+}
+
+
+QPushButton#pushButton_back
+{
+    border-image: url(:/icons/back2-48.png);
+    border-radius:2% 2%;
+}
+
+
+/* device设备控制*/
+
+/* log日志 */
+QTextBrowser#textBrowser_log
+{
+    border: 1px solid #7d9db3;
+    border-radius:2%;
+}
+
+
+QLabel#label_monitor,#label_control
+{
+}
+
+QLabel#label_1
+{
+    border-image:url(:/icons/xidingdeng-48.png);
+}
+
+QLabel#label_2
+{
+    border-image:url(:/icons/spotlight-50.png);
+}
+
+QLabel#label_3
+{
+    border-image:url(:/icons/sound-50.png);
+}
+
+QLabel#label_4
+{
+    border-image:url(:/icons/kongtiao-48.png);
+}
+
+
+QGroupBox#groupBox_1,#groupBox_3
+{   
+    background-color:#e6e6e6;
+    border: 2px solid #7d9db3;
+    border-radius:10% 10%;
+}
+
+QGroupBox#groupBox_2,#groupBox_4
+{   
+    background-color:#f2f2f2;
+    border: 2px solid #7d9db3;
+    border-radius:10% 10%;
+}
+
+
+
+QPushButton#pushButton_clear
+{
+    background-color:#1296db;
+    border-radius:2% 2%;
+}
+
+QPushButton#pushButton_clear:pressed
+{
+    background-color:#b3e0ff;
+    border-radius:2% 2%;
+}
+
+
+QPushButton#pushButton_lightHost,#pushButton_lightSpot,#pushButton_sound,#pushButton_airConditioner
+{
+    border-image: url(:/icons/off3-48.png);
+}
+
+QPushButton#pushButton_lightHost:checked,#pushButton_lightSpot:checked,#pushButton_sound:checked,#pushButton_airConditioner:checked
+{
+    border-image: url(:/icons/on3-48.png);
+}
+
+
+QPushButton#pushButton_TempUp
+{
+    border-image: url(:/icons/up-48.png);
+}
+
+
+QPushButton#pushButton_TempDown
+{
+    border-image: url(:/icons/down-48.png);
+}
+
+
+QPushButton#pushButton_TempUp:pressed
+{
+    border-image: url(:/icons/up2-48.png);
+}
+
+
+QPushButton#pushButton_TempDown:pressed
+{
+    border-image: url(:/icons/down2-48.png);
+}
+
+
+

@@ -16,6 +16,8 @@ public:
     SmartHome(QWidget *parent = nullptr);
     ~SmartHome();
 
+    void delayShow();
+
 signals:
     void showLogin();
     void showDevice();
@@ -26,9 +28,7 @@ signals:
 private slots:
     void slotShowThis();
 
-
-
-    void on_pushButton_back_clicked();
+    void on_pushButton_backLogin_clicked();
 
     void on_pushButton_device_clicked();
 

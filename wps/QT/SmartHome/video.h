@@ -14,7 +14,7 @@ class Video : public QWidget
 public:
     explicit Video(QWidget *parent = nullptr);
     ~Video();
-
+    void delayShow();
 signals:
     void showMain();
 

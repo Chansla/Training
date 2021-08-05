@@ -15,6 +15,11 @@ public:
     explicit Device(QWidget *parent = nullptr);
     ~Device();
 
+    void delayShow();
+
+private:
+    void loadStyleSheet(const QString &sheetName);
+
 signals:
     void showMain();
 
@@ -22,7 +27,6 @@ private slots:
     void slotShowThis();
 
     void on_pushButton_back_clicked();
-
 
     void on_pushButton_clear_clicked();
 
@@ -34,7 +38,7 @@ private slots:
 
     void on_pushButton_airConditioner_clicked();
 
-    void on_pushButton_TempUP_clicked();
+    void on_pushButton_TempUp_clicked();
 
     void on_pushButton_TempDown_clicked();
 

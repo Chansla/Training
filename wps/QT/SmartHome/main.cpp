@@ -9,12 +9,23 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    QFont font;
+    font.setPointSize(12);
+    font.setFamily(("Helvetica"));
+    font.setBold(false);
+    a.setFont(font);
+
+
+
+
     SmartHome w;
     Login login;
     Device device;
     Weather weather;
     Music music;
     Video video;
+
+
     login.show();
 
     QObject::connect(&login, SIGNAL(showMain()), &w, SLOT(slotShowThis()));

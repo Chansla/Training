@@ -1,0 +1,39 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/deng.png</file>
+        <file>icons/dengju.png</file>
+        <file>icons/icon_yinxiang.png</file>
+        <file>icons/icons8-air-conditioner-50.png</file>
+        <file>icons/icons8-ceiling-light-50.png</file>
+        <file>icons/icon-test.png</file>
+        <file>icons/jiajudeng-.png</file>
+        <file>icons/jiajukongtiao-.png</file>
+        <file>icons/kaiguan-guan.png</file>
+        <file>icons/kaiguan-kai.png</file>
+        <file>icons/yinxiang.png</file>
+        <file>icons/icons8-back-to-50.png</file>
+        <file>device.qss</file>
+        <file>icons/off-64.png</file>
+        <file>icons/on-64.png</file>
+        <file>icons/off2-64.png</file>
+        <file>icons/on2-64.png</file>
+        <file>icons/off3-48.png</file>
+        <file>icons/on3-48.png</file>
+        <file>icons/back1-48.png</file>
+        <file>icons/back2-48.png</file>
+        <file>icons/down-48.png</file>
+        <file>icons/up-48.png</file>
+        <file>icons/down2-48.png</file>
+        <file>icons/up2-48.png</file>
+        <file>icons/jiayongdianqi.png</file>
+        <file>icons/kongtiao-48.png</file>
+        <file>icons/sound-50.png</file>
+        <file>icons/spotlight-50.png</file>
+        <file>icons/taideng-48.png</file>
+        <file>icons/xidingdeng-48.png</file>
+        <file>icons/white.png</file>
+        <file>icons/white1.png</file>
+        <file>icons/background1.png</file>
+        <file>icons/background2.png</file>
+    </qresource>
+</RCC>

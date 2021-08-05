@@ -15,7 +15,7 @@ public:
     explicit Login(QWidget *parent = nullptr);
     ~Login();
     void keyPressEvent(QKeyEvent *event) override;
-
+    void delayShow();
 signals:
     void showMain();
 
