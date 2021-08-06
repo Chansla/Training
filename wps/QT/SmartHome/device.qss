@@ -1,7 +1,9 @@
+/*
 QWidget
 {
     background-image:url(:/res/background2.png);
 }
+*/
 
 QLineEdit
 {
@@ -9,24 +11,14 @@ QLineEdit
     border-radius:2%;
 }
 
-QPushButton#pushButton_lg
-{
-    border: 1px solid #7d9db3;
-    border-radius:2% 2%;
-}
+/* 界面标题 */
 
-QPushButton#pushButton_lg:pressed
+QLabel#label_Login,#label_Device,#label_Weather,#label_Music,#label_Video,#label_SmartHome
 {
-    background-color:#b3e0ff;
-    border-radius:2% 2%;
+   font:bold 20px;
 }
 
 
-QGroupBox#groupBox_weather
-{
-    border: 1px solid #7d9db3;
-    border-radius:2% 2%;  
-}
 
 
 /* 滑动条*/
@@ -76,6 +68,33 @@ QPushButton#pushButton_back
 }
 
 
+
+
+/* login界面 */
+
+QPushButton#pushButton_lg,#pushButton_reg
+{
+    background-color:#e6e6e6;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+QPushButton#pushButton_lg:hover,#pushButton_reg:hover
+{
+    background-color:#99d8ff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+
+QPushButton#pushButton_lg:pressed,#pushButton_reg:pressed
+{
+    background-color:#4dbbff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+
 /* device设备控制*/
 
 /* log日志 */
@@ -88,6 +107,7 @@ QTextBrowser#textBrowser_log
 
 QLabel#label_monitor,#label_control
 {
+    font:bold 16px;
 }
 
 QLabel#label_1
@@ -130,12 +150,22 @@ QGroupBox#groupBox_2,#groupBox_4
 QPushButton#pushButton_clear
 {
     background-color:#1296db;
+    border: 1px solid #7d9db3;
     border-radius:2% 2%;
 }
+
+QPushButton#pushButton_clear:hover
+{
+    background-color:#66c0ff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
 
 QPushButton#pushButton_clear:pressed
 {
     background-color:#b3e0ff;
+    border: 1px solid #7d9db3;
     border-radius:2% 2%;
 }
 
@@ -173,6 +203,118 @@ QPushButton#pushButton_TempDown:pressed
 {
     border-image: url(:/icons/down2-48.png);
 }
+
+
+
+/* weather界面 */
+
+QGroupBox#groupBox_weather
+{
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;  
+}
+
+
+QPushButton#pushButton_query
+{
+    background-color:#e5f5ff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+QPushButton#pushButton_query:hover
+{
+    background-color:#99d8ff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+QPushButton#pushButton_query:pressed
+{
+    background-color:#4dbbff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+
+QLabel#label_city,#label_weather,#label_temperature,#label_wind
+{
+    border: 1px solid #bfced9;
+    border-radius:2% 2%;
+}
+
+
+
+
+/* musci界面*/
+
+QListWidget
+{
+    background-color:#e5f9ff;
+}
+
+
+QListWidget::item:selected 
+{
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+    background-color:#66d9ff;
+}
+
+
+
+QPushButton#pushButton_pre,#pushButton_play,#pushButton_next,#pushButton_up,#pushButton_down
+{
+    background-color:#e5f5ff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+QPushButton#pushButton_pre:hover,#pushButton_play:hover,#pushButton_next:hover,#pushButton_up:hover,#pushButton_down:hover
+{
+    background-color:#99d8ff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+
+QPushButton#pushButton_pre:pressed,#pushButton_play:pressed,#pushButton_next:pressed,#pushButton_up:pressed,#pushButton_down:pressed
+{
+    background-color:#4dbbff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+
+
+
+
+/* smarthome界面 */
+
+QPushButton#pushButton_device,#pushButton_weather,#pushButton_music,#pushButton_video
+{
+    background-color:#e5f5ff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+
+QPushButton#pushButton_device:hover,#pushButton_weather:hover,#pushButton_music:hover,#pushButton_video:hover
+{
+    background-color:#99d8ff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+
+
+QPushButton#pushButton_device:pressed,#pushButton_weather:pressed,#pushButton_music:pressed,#pushButton_video:pressed
+{
+    background-color:#4dbbff;
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
 
 
 

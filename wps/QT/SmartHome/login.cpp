@@ -40,8 +40,9 @@ void Login::delayShow()
 void Login::slotShowThis()
 {
     delayShow();
-    this->show();
     ui->lineEdit_usr->setFocus();
+    this->show();
+
 }
 
 

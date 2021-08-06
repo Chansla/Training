@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QObject>
+#include <QKeyEvent>
 #include "http.h"
 #include "analysis.h"
 #include "thread.h"
@@ -17,6 +18,7 @@ class Weather : public QWidget
 public:
     explicit Weather(QWidget *parent = nullptr);
     ~Weather();
+    void keyPressEvent(QKeyEvent *event);
     void delayShwow();
 
 signals:

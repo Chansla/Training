@@ -15,6 +15,15 @@ Weather::~Weather()
     delete ui;
 }
 
+void Weather::keyPressEvent(QKeyEvent *event)
+{
+    if(event->key() == Qt::Key_Enter || event->key() == Qt::Key_Return){
+            emit ui->pushButton_query->click();
+    }
+}
+
+
+
 void Weather::delayShwow()
 {
     QTime dieTime = QTime::currentTime().addMSecs(200);//延时300毫秒
@@ -24,6 +33,7 @@ void Weather::delayShwow()
 void Weather::slotShowThis()
 {
     delayShwow();
+    ui->lineEdit_input->setFocus();
     this->show();
 }
 

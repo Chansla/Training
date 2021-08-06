@@ -50,7 +50,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="layoutWidget1">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -240,7 +240,7 @@
    <property name="title">
     <string/>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget2">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -366,7 +366,7 @@
    <property name="title">
     <string/>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget3">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -489,7 +489,7 @@
    <property name="title">
     <string/>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget4">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -612,7 +612,7 @@
    <property name="title">
     <string/>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget5">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -790,7 +790,7 @@
     </layout>
    </widget>
   </widget>
-  <widget class="QLabel" name="label_device">
+  <widget class="QLabel" name="label_Device">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -806,18 +806,6 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <zorder>layoutWidget</zorder>
-  <zorder>label_airConditioner</zorder>
-  <zorder>label_lightSpot</zorder>
-  <zorder>label_sound</zorder>
-  <zorder>label_control</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>pushButton_back</zorder>
-  <zorder>groupBox_1</zorder>
-  <zorder>groupBox_2</zorder>
-  <zorder>groupBox_3</zorder>
-  <zorder>groupBox_4</zorder>
-  <zorder>label_device</zorder>
  </widget>
  <resources/>
  <connections/>

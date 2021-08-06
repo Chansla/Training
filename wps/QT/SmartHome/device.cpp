@@ -16,10 +16,10 @@ Device::Device(QWidget *parent) :
     ui->horizontalSlider_sound->setRange(0, 100);
     ui->lineEdit_temperature->setReadOnly(true);
     ui->lineEdit_temperature->setText(QString::number(this->Temp));
-    QFont font;
-    font.setPointSize(15);
-    ui->label_control->setFont(font);
-    ui->label_monitor->setFont(font);
+//    QFont font;
+//    font.setPointSize(15);
+//    ui->label_control->setFont(font);
+//    ui->label_monitor->setFont(font);
 
 
 }

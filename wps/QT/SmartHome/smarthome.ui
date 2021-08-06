@@ -97,7 +97,7 @@
      <string>视频监控</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_smartHome">
+   <widget class="QLabel" name="label_SmartHome">
     <property name="geometry">
      <rect>
       <x>180</x>
