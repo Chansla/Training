@@ -170,3 +170,8 @@ void Device::on_horizontalSlider_sound_valueChanged(int value)
     }
 
 }
+
+void Device::on_pushButton_close_clicked()
+{
+    qApp->exit();
+}

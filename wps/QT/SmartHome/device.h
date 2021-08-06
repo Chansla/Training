@@ -22,7 +22,6 @@ private:
 
 signals:
     void showMain();
-
 private slots:
     void slotShowThis();
 
@@ -47,6 +46,8 @@ private slots:
     void on_horizontalSlider_lightSpot_valueChanged(int value);
 
     void on_horizontalSlider_sound_valueChanged(int value);
+
+    void on_pushButton_close_clicked();
 
 private:
     Ui::Device *ui;

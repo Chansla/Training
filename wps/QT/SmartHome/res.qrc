@@ -35,5 +35,18 @@
         <file>icons/white1.png</file>
         <file>icons/background1.png</file>
         <file>icons/background2.png</file>
+        <file>icons/jietu.png</file>
+        <file>icons/jietu_1.png</file>
+        <file>icons/monitor.png</file>
+        <file>icons/monitor_1.png</file>
+        <file>icons/dianying.png</file>
+        <file>icons/dianying_1.png</file>
+        <file>icons/qiepianjietu.png</file>
+        <file>icons/qiepianjietu_1.png</file>
+        <file>icons/shexiangtou.png</file>
+        <file>icons/shexiangtou_1.png</file>
+        <file>icons/close1.png</file>
+        <file>icons/close2.png</file>
+        <file>icons/close3.png</file>
     </qresource>
 </RCC>

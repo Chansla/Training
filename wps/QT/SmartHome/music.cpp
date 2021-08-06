@@ -16,7 +16,7 @@ Music::Music(QWidget *parent) :
     playList = new QMediaPlaylist;
     player = new QMediaPlayer;
 
-    QString songPath = "../MusicPlayer/song";
+    QString songPath = "../SmartHome/song";
     QDir dir(songPath);
     dir.setFilter(QDir::NoDotAndDotDot | QDir::AllEntries);
     QFileInfoList songs = dir.entryInfoList();
@@ -153,4 +153,9 @@ void Music::on_pushButton_down_clicked()
         this->musicVolume = 0;
     }
     player->setVolume(musicVolume);
+}
+
+void Music::on_pushButton_close_clicked()
+{
+    qApp->exit();
 }

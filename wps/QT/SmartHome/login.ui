@@ -22,9 +22,9 @@
   <widget class="QLabel" name="label_Login">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>219</x>
      <y>10</y>
-     <width>160</width>
+     <width>201</width>
      <height>40</height>
     </rect>
    </property>
@@ -214,6 +214,25 @@
      </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_close">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>40</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources/>

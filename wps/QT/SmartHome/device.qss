@@ -11,11 +11,35 @@ QLineEdit
     border-radius:2%;
 }
 
+QPushButton#pushButton_close
+{
+    border-image:url(:/icons/close3.png);
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+QPushButton#pushButton_close:hover
+{
+    border-image:url(:/icons/close2.png);
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+
+QPushButton#pushButton_close:pressed
+{
+    border-image:url(:/icons/close1.png);
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
+
+
 /* 界面标题 */
 
 QLabel#label_Login,#label_Device,#label_Weather,#label_Music,#label_Video,#label_SmartHome
 {
    font:bold 20px;
+   color:#0099ff
 }
 
 
@@ -285,13 +309,9 @@ QPushButton#pushButton_pre:pressed,#pushButton_play:pressed,#pushButton_next:pre
     border-radius:2% 2%;
 }
 
-
-
-
-
 /* smarthome界面 */
 
-QPushButton#pushButton_device,#pushButton_weather,#pushButton_music,#pushButton_video
+QPushButton#pushButton_Device,#pushButton_Weather,#pushButton_Music,#pushButton_Video
 {
     background-color:#e5f5ff;
     border: 1px solid #7d9db3;
@@ -299,7 +319,7 @@ QPushButton#pushButton_device,#pushButton_weather,#pushButton_music,#pushButton_
 }
 
 
-QPushButton#pushButton_device:hover,#pushButton_weather:hover,#pushButton_music:hover,#pushButton_video:hover
+QPushButton#pushButton_Device:hover,#pushButton_Weather:hover,#pushButton_Music:hover,#pushButton_Video:hover
 {
     background-color:#99d8ff;
     border: 1px solid #7d9db3;
@@ -308,13 +328,62 @@ QPushButton#pushButton_device:hover,#pushButton_weather:hover,#pushButton_music:
 
 
 
-QPushButton#pushButton_device:pressed,#pushButton_weather:pressed,#pushButton_music:pressed,#pushButton_video:pressed
+QPushButton#pushButton_Device:pressed,#pushButton_Weather:pressed,#pushButton_Music:pressed,#pushButton_Video:pressed
 {
     background-color:#4dbbff;
     border: 1px solid #7d9db3;
     border-radius:2% 2%;
 }
 
+
+/* video 界面 */
+
+QGroupBox#groupBox_screenshoot,#groupBox_video,#groupBox_videocontrol
+{
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;  
+}
+
+
+QPushButton#pushButton_open
+{
+    border-image: url(:/icons/shexiangtou_1.png);
+}
+
+
+QPushButton#pushButton_open:checked
+{
+    border-image: url(:/icons/shexiangtou.png);
+}
+
+
+QPushButton#pushButton_video
+{
+    border-image: url(:/icons/dianying_1.png);
+}
+
+QPushButton#pushButton_video:checked
+{
+    border-image: url(:/icons/dianying.png);
+}
+
+
+QPushButton#pushButton_snipaste
+{
+    border-image: url(:/icons/qiepianjietu_1.png);
+}
+
+QPushButton#pushButton_snipaste:checked
+{
+    border-image: url(:/icons/qiepianjietu.png);
+}
+
+
+QLabel#label_log
+{
+    border: 1px solid #7d9db3;
+    border-radius:2% 2%;
+}
 
 
 

@@ -5,6 +5,9 @@
 #include <QCamera>
 #include <QCameraViewfinder>
 #include <QCameraImageCapture>
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
+#include <QListWidgetItem>
 namespace Ui {
 class Video;
 }
@@ -29,18 +32,27 @@ private slots:
 
     void on_pushButton_snipaste_clicked();
 
-    void on_pushButton_screenshot_clicked();
+    void on_pushButton_video_clicked();
+
+    void slotSetIndex(int index);
 
     void slotImageCaptured(int index, QImage image);
 
+    void on_listWidget_video_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_pushButton_close_clicked();
+
 private:
     Ui::Video *ui;
-    QCamera* camera;
-    QCameraViewfinder* viewFinder;
-    QCameraImageCapture* capture;
+    QCamera* camera = nullptr;
+    QCameraViewfinder* viewFinder = nullptr;
+    QCameraImageCapture* capture = nullptr;
+    QVideoWidget* videowidget;
+    QMediaPlayer* player;
+    QMediaPlaylist* playList;
 
-
-    QString path = "../SmartHome/screenShoots";
+    QString videoPath;
+    QString path;
 };
 
 #endif // VIDEO_H

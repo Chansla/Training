@@ -24,6 +24,8 @@ private slots:
 
     void on_pushButton_lg_clicked();
 
+    void on_pushButton_close_clicked();
+
 private:
     Ui::Login *ui;
     QString usr;

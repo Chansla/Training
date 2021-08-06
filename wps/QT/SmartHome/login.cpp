@@ -67,3 +67,8 @@ void Login::on_pushButton_lg_clicked()
         ui->lineEdit_pwd->setFocus();
     }
 }
+
+void Login::on_pushButton_close_clicked()
+{
+    qApp->exit();
+}

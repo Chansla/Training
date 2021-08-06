@@ -38,27 +38,32 @@ void SmartHome::on_pushButton_backLogin_clicked()
 }
 
 
-void SmartHome::on_pushButton_device_clicked()
+void SmartHome::on_pushButton_Device_clicked()
 {
     this->hide();
 
     emit showDevice();
 }
 
-void SmartHome::on_pushButton_weather_clicked()
+void SmartHome::on_pushButton_Weather_clicked()
 {
     this->hide();
     emit showWeather();
 }
 
-void SmartHome::on_pushButton_music_clicked()
+void SmartHome::on_pushButton_Music_clicked()
 {
     this->hide();
     emit showMusic();
 }
 
-void SmartHome::on_pushButton_video_clicked()
+void SmartHome::on_pushButton_Video_clicked()
 {
     this->hide();
     emit showVideo();
+}
+
+void SmartHome::on_pushButton_close_clicked()
+{
+    qApp->exit();
 }

@@ -71,3 +71,8 @@ void Weather::slotReceiveData(QJsonObject dataToday)
     ui->label_temperature->setText(QString(this->temperatureLow + " ~ " + this->temperatureHigh));
     ui->label_wind->setText(QString(this->wind + " : " + this->windPower.mid(9,2)));
 }
+
+void Weather::on_pushButton_close_clicked()
+{
+    qApp->exit();
+}

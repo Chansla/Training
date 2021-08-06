@@ -47,6 +47,8 @@ private slots:
 
     void on_pushButton_down_clicked();
 
+    void on_pushButton_close_clicked();
+
 private:
     Ui::Music *ui;
     QMediaPlaylist* playList;

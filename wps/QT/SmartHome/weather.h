@@ -33,6 +33,8 @@ private slots:
 
     void slotReceiveData(QJsonObject dataToday);
 
+    void on_pushButton_close_clicked();
+
 private:
     Ui::Weather *ui;
     Http* http;

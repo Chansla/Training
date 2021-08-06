@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     QFont font;
     font.setPointSize(10);
-    font.setFamily(("Helvetica"));
+    font.setFamily(("SimSun"));
     font.setBold(false);
     a.setFont(font);
 
@@ -27,7 +27,6 @@ int main(int argc, char *argv[])
 
 
     login.show();
-
     QObject::connect(&login, SIGNAL(showMain()), &w, SLOT(slotShowThis()));
     QObject::connect(&w, SIGNAL(showLogin()), &login, SLOT(slotShowThis()));
 

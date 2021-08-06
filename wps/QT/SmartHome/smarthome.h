@@ -30,13 +30,15 @@ private slots:
 
     void on_pushButton_backLogin_clicked();
 
-    void on_pushButton_device_clicked();
+    void on_pushButton_Device_clicked();
 
-    void on_pushButton_weather_clicked();
+    void on_pushButton_Weather_clicked();
 
-    void on_pushButton_music_clicked();
+    void on_pushButton_Music_clicked();
 
-    void on_pushButton_video_clicked();
+    void on_pushButton_Video_clicked();
+
+    void on_pushButton_close_clicked();
 
 private:
     Ui::SmartHome *ui;
