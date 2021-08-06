@@ -150,6 +150,16 @@
     </property>
    </widget>
   </widget>
+  <widget class="QTextBrowser" name="textBrowser_video">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>280</y>
+     <width>201</width>
+     <height>101</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

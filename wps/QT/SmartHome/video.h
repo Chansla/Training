@@ -31,6 +31,8 @@ private slots:
 
     void on_pushButton_screenshot_clicked();
 
+    void slotImageCaptured(int index, QImage image);
+
 private:
     Ui::Video *ui;
     QCamera* camera;
@@ -38,7 +40,7 @@ private:
     QCameraImageCapture* capture;
 
 
-    QString path = "../screenShoots";
+    QString path = "../SmartHome/screenShoots";
 };
 
 #endif // VIDEO_H

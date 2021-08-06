@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QFont font;
-    font.setPointSize(12);
+    font.setPointSize(10);
     font.setFamily(("Helvetica"));
     font.setBold(false);
     a.setFont(font);
