@@ -16,7 +16,7 @@ Music::Music(QWidget *parent) :
     playList = new QMediaPlaylist;
     player = new QMediaPlayer;
 
-    QString songPath = "../SmartHome/song";
+    QString songPath = QDir::currentPath() + "/song";
     QDir dir(songPath);
     dir.setFilter(QDir::NoDotAndDotDot | QDir::AllEntries);
     QFileInfoList songs = dir.entryInfoList();

@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+<file alias="icons/idea.ico">D:/wps_code/Training/wps/QT/SmartHome/icons/idea.ico</file>
+</qresource>
+</RCC>

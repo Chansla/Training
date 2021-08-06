@@ -18,8 +18,8 @@ Video::Video(QWidget *parent) :
     ui->pushButton_open->setCheckable(true);
     ui->pushButton_video->setCheckable(true);
 
-    videoPath = "../SmartHome/video";
-    path = "../SmartHome/screenShoots";
+    videoPath = QDir::currentPath() + "/video";
+    path = QDir::currentPath() + "/screenshoots";
 
     // init camera
     camera = new QCamera;
@@ -29,6 +29,7 @@ Video::Video(QWidget *parent) :
     viewFinder->setWindowFlags(Qt::FramelessWindowHint);
     viewFinder->setGeometry(10, 10, 380, 370);
     viewFinder->setParent(ui->groupBox_video);
+    viewFinder->hide();
 
     // init video player
     QDir dir(videoPath);
@@ -42,6 +43,7 @@ Video::Video(QWidget *parent) :
     videowidget = new QVideoWidget;
     videowidget->setGeometry(10, 10, 380, 370);
     videowidget->setParent(ui->groupBox_video);
+    videowidget->hide();
     player->setVideoOutput(videowidget);
 
     for(int i = 0; i< songs.count(); i++)
@@ -101,10 +103,11 @@ void Video::on_pushButton_open_clicked()
     }
     else
     {
-        if(camera->isAvailable())
+        if(!viewFinder->isHidden())
         {
             camera->stop();
-             ui->label_log->setText(tr("摄像头关闭."));
+            ui->label_log->setText(tr("摄像头关闭."));
+            viewFinder->hide();
             ui->pushButton_open->setChecked(false);
             return;
         }
@@ -151,17 +154,23 @@ void Video::on_pushButton_video_clicked()
         ui->pushButton_video->setChecked(false);
         return;
     }
+    if(playList->isEmpty())
+    {
+        ui->label_log->setText(tr("暂时没有添加视频文件！"));
+        ui->pushButton_video->setChecked(false);
+        return;
+    }
     else
     {
         if(!ui->pushButton_video->isChecked() &&player->state() == QMediaPlayer::State::PlayingState)
         {
           player->stop();
           ui->label_log->setText(tr("视频播放关闭."));
+          videowidget->hide();
           return;
         }
         viewFinder->hide();
         videowidget->show();
-
         playList->setCurrentIndex(ui->listWidget_video->currentRow());
         player->play();
         ui->label_log->setText(tr("视频播放开启."));

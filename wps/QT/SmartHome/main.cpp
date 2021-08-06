@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     font.setFamily(("SimSun"));
     font.setBold(false);
     a.setFont(font);
+    a.setWindowIcon(QIcon());
 
 
 

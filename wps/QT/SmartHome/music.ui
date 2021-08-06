@@ -28,7 +28,7 @@
     <rect>
      <x>450</x>
      <y>80</y>
-     <width>77</width>
+     <width>82</width>
      <height>351</height>
     </rect>
    </property>
@@ -106,7 +106,7 @@
      <x>30</x>
      <y>440</y>
      <width>401</width>
-     <height>22</height>
+     <height>32</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -120,14 +120,14 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>80</width>
-        <height>20</height>
+        <width>100</width>
+        <height>25</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>80</width>
-        <height>20</height>
+        <width>100</width>
+        <height>25</height>
        </size>
       </property>
       <property name="text">
@@ -161,14 +161,14 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>80</width>
-        <height>20</height>
+        <width>100</width>
+        <height>25</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>80</width>
-        <height>20</height>
+        <width>100</width>
+        <height>25</height>
        </size>
       </property>
       <property name="text">
@@ -199,14 +199,14 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>80</width>
-        <height>20</height>
+        <width>100</width>
+        <height>25</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>80</width>
-        <height>20</height>
+        <width>100</width>
+        <height>25</height>
        </size>
       </property>
       <property name="text">

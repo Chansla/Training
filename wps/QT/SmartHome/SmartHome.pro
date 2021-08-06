@@ -1,5 +1,5 @@
 QT       += core gui multimedia multimediawidgets network
-
+RC_ICONS += ./icons/idea.ico
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++11
 
@@ -47,4 +47,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     res.qrc
 
-DISTFILES +=
+
